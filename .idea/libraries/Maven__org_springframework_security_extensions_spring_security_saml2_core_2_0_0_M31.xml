@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.security.extensions:spring-security-saml2-core:2.0.0.M31">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/extensions/spring-security-saml2-core/2.0.0.M31/spring-security-saml2-core-2.0.0.M31.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/extensions/spring-security-saml2-core/2.0.0.M31/spring-security-saml2-core-2.0.0.M31-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/extensions/spring-security-saml2-core/2.0.0.M31/spring-security-saml2-core-2.0.0.M31-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

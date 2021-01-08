@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <title>Spring Security SAML2</title>
+    </head>
+    <body style="background-color: aquamarine;">
+        <h1>SAML2 Login Example with Spring Security 5.2</h1>
+        <div>You are logged in as <span sec:authentication="name"></span></div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Logout" />
+            </form>
+        </div>
+    </body>
+</html>

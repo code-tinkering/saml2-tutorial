@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Spring Security 5.2 - SAML 2 Example</title>
+    <meta charset="utf-8" />
+</head>
+<body style="background-color: sky; color: navy;">
+<h1>Select a Service Provider</h1>
+<div>
+    <ul>
+        <li th:each="sp : ${sps}">
+            <a th:href="${sp.redirect}"><span style="font-weight:bold" th:text="${sp.linkText}"/></a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

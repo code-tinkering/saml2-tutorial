@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Spring Security 5.2 - SAML 2 Example</title>
+    <meta charset="utf-8" />
+</head>
+<body onload="document.forms[0].submit()">
+<noscript>
+    <p>
+        <strong>Note:</strong> Please click continue if you are not redirected automatically.
+    </p>
+</noscript>
+
+<form th:action="${url}" method="POST">
+    <div>
+        <input th:if="${RelayState != null}" type="hidden" name="RelayState" th:value="${RelayState}"/>
+        <input th:if="${SAMLResponse != null}" type="hidden" name="SAMLResponse" th:value="${SAMLResponse}"/>
+        <input th:if="${SAMLRequest != null}" type="hidden" name="SAMLRequest" th:value="${SAMLRequest}"/>
+    </div>
+    <noscript>
+        <div>
+            <input type="submit" value="Continue"/>
+        </div>
+    </noscript>
+</form>
+</body>
+</html>

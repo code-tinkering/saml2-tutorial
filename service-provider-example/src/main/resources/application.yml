@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /sample-sp
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.saml: INFO
+    org.opensaml.xmlsec: TRACE
+
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          samlexample:
+            signing:
+              credentials:
+                - private-key-location: "classpath:credentials/private.key"
+                  certificate-location: "classpath:credentials/public.cer"
+            identityprovider:
+              entity-id: codetinkering.com
+              singlesignon:
+                sign-request: false
+                url: http://localhost:8081/sample-idp/saml/idp/select
+              metadata-uri: http://localhost:8081/sample-idp/saml/idp/metadata
